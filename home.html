@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dasari Satya Prasanna — BCA Student & Tech Enthusiast. Building clean, responsive, and modern digital experiences." />
+  <meta name="author" content="Dasari Satya Prasanna" />
+  <title>Hi, I'm D.Prasanna — My Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Lucide via CDN — pure JS, no framework) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"><div id="scrollBar"></div></div>
+
+  <!-- Background FX (pastel glow blobs) -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="grid-bg"></div>
+    <div class="blob blob-peach"></div>
+    <div class="blob blob-lavender"></div>
+    <div class="blob blob-mint"></div>
+    <div class="blob blob-blush"></div>
+    <div class="bg-fade"></div>
+  </div>
+
+  <!-- ============== NAVBAR ============== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <nav class="nav glass">
+        <button class="brand" onclick="scrollToSection('home')">
+          <span class="brand-mark">DP</span>
+          <span class="brand-text text-gradient">D.Prasanna</span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><button class="nav-link" data-target="home">home</button></li>
+          <li><button class="nav-link" data-target="about">about</button></li>
+          <li><button class="nav-link" data-target="skills">skills</button></li>
+          <li><button class="nav-link" data-target="projects">projects</button></li>
+          <li><button class="nav-link" data-target="education">education</button></li>
+          <li><button class="nav-link" data-target="certifications">certifications</button></li>
+          <li><button class="nav-link" data-target="achievements">achievements</button></li>
+          <li><button class="nav-link" data-target="contact">contact</button></li>
+        </ul>
+
+        <button class="btn-talk" onclick="scrollToSection('contact')">Let's talk</button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </nav>
+
+      <div class="mobile-menu glass" id="mobileMenu" hidden>
+        <ul>
+          <li><button class="nav-link" data-target="home">home</button></li>
+          <li><button class="nav-link" data-target="about">about</button></li>
+          <li><button class="nav-link" data-target="skills">skills</button></li>
+          <li><button class="nav-link" data-target="projects">projects</button></li>
+          <li><button class="nav-link" data-target="education">education</button></li>
+          <li><button class="nav-link" data-target="certifications">certifications</button></li>
+          <li><button class="nav-link" data-target="achievements">achievements</button></li>
+          <li><button class="nav-link" data-target="contact">contact</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============== HERO ============== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left fade-up">
+          <div class="chip glass">
+            <i data-lucide="sparkles" class="chip-ico"></i>
+            <span>Available for freelance &amp; internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-pre">Hi, I'm</span>
+            <span class="text-gradient">Dasari Satya Prasanna</span>
+          </h1>
+
+          <div class="hero-roles">
+            <span id="typed" class="typed"></span><span class="caret"></span>
+          </div>
+
+          <p class="hero-lead">
+            Passionate about creating modern, responsive, and user-friendly digital experiences —
+            building clean, accessible interfaces through code and creativity.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary glow-soft">
+              View Projects <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass">Contact Me</a>
+            <a href="resume/myresume.pdf" class="btn btn-ghost"><i data-lucide="download"></i> Resume</a>
+          </div>
+
+          <div class="hero-socials">
+           <a class="icon-btn glass" href="https://github.com/dasariprasanna225-cloud" target="_blank" rel="noreferrer">
+           <h3>G</h3>
+            <i data-lucide="github"></i>
+           </a>
+
+           <a class="icon-btn glass" href="https://www.linkedin.com/in/satya-prasanna-dasari" target="_blank" rel="noreferrer">
+             <h3>Li</h3>
+            <i data-lucide="linkedin"></i>
+           </a>
+
+           <a class="icon-btn glass" href="mailto:dasariprasanna225@gmail.com">
+           <i data-lucide="mail"></i>
+           </a>
+           </div>
+           
+        </div>
+
+        <!-- Profile card -->
+        <div class="profile-wrap fade-in">
+          <div class="profile-halo"></div>
+          <div class="profile-card glass-strong glow-border">
+            <div class="profile-img-wrap">
+              <img src="images/profile.jpg" alt="Dasari Satya Prasanna" width="768" height="896" />
+              <div class="profile-img-fade"></div>
+              <div class="profile-img-meta">
+                <div>
+                  <div class="pm-name">D.Prasanna</div>
+                  <div class="pm-sub">BCA Student</div>
+                </div>
+                <span class="status-pill">
+                  <span class="status-dot"></span> Available
+                </span>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div class="stat"><div class="stat-v text-gradient">Future</div><div class="stat-l">Developer</div></div>
+              <div class="stat"><div class="stat-v text-gradient">50+</div><div class="stat-l">Certs</div></div>
+              <div class="stat"><div class="stat-v text-gradient">Creative</div><div class="stat-l">Thinker</div></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>About</div>
+          <h2 class="section-title text-gradient">A developer with curiosity at the core.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>I'm <strong>Dasari Satya Prasanna</strong>, a Bachelor of Computer Applications student deeply passionate about frontend development, programming, and modern web technologies. I love turning ideas into clean, responsive interfaces that feel effortless to use.</p>
+            <p>My focus areas include building responsive websites, solving coding problems, and constantly learning new tools that push the web forward. I care about the small details — typography, spacing, motion — that make digital experiences feel premium.</p>
+            <p>Beyond code, I value teamwork, creativity, and a continuous-learning mindset. I'm always exploring how to grow as a developer and contribute meaningfully to the projects I work on.</p>
+          </div>
+
+          <div class="trait-grid">
+            <div class="trait reveal glass">
+              <div class="trait-ico"><i data-lucide="code-2"></i></div>
+              <div class="trait-title">Clean Code</div>
+              <p>Writing maintainable, semantic, and accessible frontend code.</p>
+            </div>
+            <div class="trait reveal glass">
+              <div class="trait-ico"><i data-lucide="lightbulb"></i></div>
+              <div class="trait-title">Problem Solving</div>
+              <p>Breaking down complex challenges into elegant solutions.</p>
+            </div>
+            <div class="trait reveal glass">
+              <div class="trait-ico"><i data-lucide="users"></i></div>
+              <div class="trait-title">Team Player</div>
+              <p>Collaborating effectively and communicating clearly across teams.</p>
+            </div>
+            <div class="trait reveal glass">
+              <div class="trait-ico"><i data-lucide="rocket"></i></div>
+              <div class="trait-title">Always Learning</div>
+              <p>Continuously exploring new tools, frameworks, and patterns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SKILLS ============== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Skills</div>
+          <h2 class="section-title text-gradient">The toolkit I build with.</h2>
+          <p class="section-desc">A mix of core programming fundamentals and the everyday tools that keep my workflow sharp.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal glass">
+            <h3>Programming Languages</h3>
+            <div class="skills-list">
+              <div class="skill"><div class="skill-row"><span>C</span><span>85%</span></div><div class="bar"><div class="bar-fill" data-w="85%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>Python</span><span>80%</span></div><div class="bar"><div class="bar-fill" data-w="80%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>JavaScript</span><span>82%</span></div><div class="bar"><div class="bar-fill" data-w="82%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>HTML</span><span>95%</span></div><div class="bar"><div class="bar-fill" data-w="95%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>CSS</span><span>90%</span></div><div class="bar"><div class="bar-fill" data-w="90%"></div></div></div>
+            </div>
+          </div>
+          <div class="skill-card reveal glass">
+            <h3>Tools &amp; Software</h3>
+            <div class="skills-list">
+              <div class="skill"><div class="skill-row"><span>VS Code</span><span>95%</span></div><div class="bar"><div class="bar-fill" data-w="95%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>GitHub</span><span>85%</span></div><div class="bar"><div class="bar-fill" data-w="85%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>MS Excel</span><span>80%</span></div><div class="bar"><div class="bar-fill" data-w="80%"></div></div></div>
+              <div class="skill"><div class="skill-row"><span>MS Word</span><span>88%</span></div><div class="bar"><div class="bar-fill" data-w="88%"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PROJECTS ============== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Projects</div>
+          <h2 class="section-title text-gradient">Selected work.</h2>
+          <p class="section-desc">A handful of things I've built — focused on responsive interfaces, clean code, and thoughtful detail.</p>
+        </div>
+
+        <div class="filters reveal" id="filters">
+          <button class="filter active" data-filter="All">All</button>
+          <button class="filter" data-filter="Web">Web</button>
+          <button class="filter" data-filter="UI/UX">UI/UX</button>
+          <button class="filter" data-filter="Design">Design</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project reveal glass" data-tags="Web,UI/UX">
+            <div class="project-img">
+              <img src="images/project1.jpg.jpeg" alt="Hackathon Event Management Website" loading="lazy" />
+              <div class="project-img-fade"></div>
+            </div>
+            <div class="project-body">
+              <h3>Hackathon Event Management Website</h3>
+              <p>A responsive hackathon website designed for event registration, team collaboration, and competition updates. Focused on clean UI, accessibility, and responsive design.</p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a class="link-btn" href="https://github.com/dasariprasanna225-cloud" target="_blank" rel="noreferrer"><i data-lucide="github"></i> GitHub</a>
+                <a class="link-btn primary" href="https://find-my-lovedones.lovable.app/" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i> Live Demo</a>
+                <a class="link-btn primary" href="https://www.figma.com/proto/fem5MKidJ2jf6WAjFJ9sCt/Untitled?node-id=1-2&p=f&t=q8mYMlxPY69DQlRV-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i>Open App</a>         
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal glass" data-tags="Web,Design">
+            <div class="project-img">
+              <img src="images/project2.jpg.png" alt="Modern Portfolio Website" loading="lazy" />
+              <div class="project-img-fade"></div>
+            </div>
+            <div class="project-body">
+              <h3>Modern Portfolio Website</h3>
+              <p>A sleek and responsive developer portfolio with smooth animations and glassmorphism-inspired components.</p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a class="link-btn" href="https://github.com/dasariprasanna225-cloud" target="_blank" rel="noreferrer"><i data-lucide="github"></i> GitHub</a>
+                <a class="link-btn primary" href="videos/demo.mp4" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i> Live Demo</a>
+                <a class="link-btn primary" href="http://127.0.0.1:5500/portfolio/home.html" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i>My Portfolio</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== EDUCATION ============== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Journey</div>
+          <h2 class="section-title text-gradient">Education &amp; Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-line"></div>
+          <ul>
+            <li class="tl-item reveal left">
+              <div class="tl-card glass">
+                <div class="tl-period">2024 – 2027</div>
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <div class="tl-place">Aditya Degree College, Tuni</div>
+                <p>Focusing on programming fundamentals, web technologies, and modern software development.</p>
+              </div>
+              <div class="tl-node glass glow-border"><i data-lucide="graduation-cap"></i></div>
+            </li>
+            <li class="tl-item reveal right">
+              <div class="tl-card glass">
+                <div class="tl-period">Completed</div>
+                <h3>Secondary Education</h3>
+                <div class="tl-place">ZPH High School</div>
+                <p>Built a strong foundation in mathematics, science, and analytical thinking.</p>
+              </div>
+              <div class="tl-node glass glow-border"><i data-lucide="school"></i></div>
+            </li>
+            <li class="tl-item reveal left">
+              <div class="tl-card glass">
+                <div class="tl-period">Internship</div>
+                <h3>Internship — Ulearn</h3>
+                <div class="tl-place">Frontend / Web</div>
+                <p>Hands-on experience with web technologies and collaborative project workflows.</p>
+              </div>
+              <div class="tl-node glass glow-border"><i data-lucide="briefcase"></i></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CERTIFICATIONS ============== -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Certifications</div>
+          <h2 class="section-title text-gradient">Continuous learning, certified.</h2>
+          <p class="section-desc">A snapshot of the programs and platforms where I've sharpened my skills.</p>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert reveal glass"><div class="cert-ico"><i data-lucide="code"></i></div><div class="cert-title">Cisco Python Essentials</div><div class="cert-issuer">Cisco Networking Academy</div></div>
+          <div class="cert reveal glass"><div class="cert-ico"><i data-lucide="code"></i></div><div class="cert-title">Cisco C Essentials</div><div class="cert-issuer">Cisco Networking Academy</div></div>
+          <div class="cert reveal glass"><div class="cert-ico"><i data-lucide="badge-check"></i></div><div class="cert-title">MePro Certification</div><div class="cert-issuer">MePro</div></div>
+          <div class="cert reveal glass"><div class="cert-ico"><i data-lucide="star"></i></div><div class="cert-title">HackerRank C — 3★ Proficiency</div><div class="cert-issuer">HackerRank</div></div>
+          <div class="cert reveal glass"><div class="cert-ico"><i data-lucide="trophy"></i></div><div class="cert-title">50+ Coursera Certifications</div><div class="cert-issuer">Coursera</div></div>
+          <div class="cert reveal glass"><div class="cert-ico"><i data-lucide="award"></i></div><div class="cert-title">NSS Volunteer Recognition</div><div class="cert-issuer">National Service Scheme</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ACHIEVEMENTS ============== -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Achievements</div>
+          <h2 class="section-title text-gradient">Moments worth highlighting.</h2>
+        </div>
+
+        <div class="ach-grid">
+          <div class="ach reveal glass">
+            <div class="ach-glow"></div>
+            <div class="ach-row">
+              <div class="ach-ico"><i data-lucide="trophy"></i></div>
+              <div><h3>Top 5 — Hackathon</h3><p>Worked in a 4-member team to build a responsive hackathon website using HTML and CSS. Designed user-friendly interfaces and ensured cross-browser compatibility. Secured Top 5 position among 20+ teams.</p></div>
+            </div>
+          </div>
+          <div class="ach reveal glass">
+            <div class="ach-glow"></div>
+            <div class="ach-row">
+              <div class="ach-ico"><i data-lucide="heart-handshake"></i></div>
+              <div><h3>Active NSS Volunteer</h3><p>Participating in community service initiatives and contributing to social impact projects.</p></div>
+            </div>
+          </div>
+          <div class="ach reveal glass">
+            <div class="ach-glow"></div>
+            <div class="ach-row">
+              <div class="ach-ico"><i data-lucide="users"></i></div>
+              <div><h3>Teamwork &amp; Communication</h3><p>Strong collaboration and communication skills across technical and non-technical teams.</p></div>
+            </div>
+          </div>
+          <div class="ach reveal glass">
+            <div class="ach-glow"></div>
+            <div class="ach-row">
+              <div class="ach-ico"><i data-lucide="sparkles"></i></div>
+              <div><h3>Event Participation</h3><p>Regular participant in technical, collaborative, and community-oriented events.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Contact</div>
+          <h2 class="section-title text-gradient">Let's build something great together.</h2>
+          <p class="section-desc">Have a project in mind, an opportunity, or just want to say hi? My inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="channels reveal">
+            <a class="channel glass" href="mailto:dasariprasanna225@gmail.com"><div class="ch-ico"><i data-lucide="mail"></i></div><div><div class="ch-label">Email</div><div class="ch-val">dasariprasanna225@gmail.com</div></div></a>
+            <a class="channel glass" href="tel:+919052133246"><div class="ch-ico"><i data-lucide="phone"></i></div><div><div class="ch-label">Phone</div><div class="ch-val">+91 90521 33246</div></div></a>
+            <a class="channel glass" href="https://www.linkedin.com/in/satya-prasanna-dasari" target="_blank" rel="noreferrer"><div class="ch-ico"><h3>Li</h3><i data-lucide="linkedin"></i></div><div><div class="ch-label">LinkedIn</div><div class="ch-val">satya-prasanna-dasari</div></div></a>
+            <a class="channel glass" href="https://github.com/dasariprasanna225-cloud" target="_blank" rel="noreferrer"><div class="ch-ico"><h3>G</h3><i data-lucide="github"></i></div><div><div class="ch-label">GitHub</div><div class="ch-val">dasariprasanna225-cloud</div></div></a>
+          </div>
+
+          <form id="contactForm" class="contact-form glass-strong glow-border reveal">
+            <div class="form-row">
+              <div class="field"><label>Your name</label><input type="text" name="name" placeholder="Jane Doe" required /></div>
+              <div class="field"><label>Email</label><input type="email" name="email" placeholder="jane@example.com" required /></div>
+            </div>
+            <div class="field"><label>Subject</label><input type="text" name="subject" placeholder="Project inquiry" required /></div>
+            <div class="field"><label>Message</label><textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></div>
+            <button type="submit" class="btn btn-primary glow-soft" id="submitBtn"><i data-lucide="send"></i> <span>Send Message</span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-text">
+        Designed &amp; Developed by <strong>Dasari Satya Prasanna</strong>
+        <span class="sep">•</span>
+        <span>© <span id="year"></span></span>
+      </div>
+      <div class="footer-socials">
+        <a class="icon-btn glass" href="https://github.com/dasariprasanna225-cloud" target="_blank" rel="noreferrer"><i data-lucide="github"></i></a>
+        <a class="icon-btn glass" href="https://www.linkedin.com/in/satya-prasanna-dasari" target="_blank" rel="noreferrer"><i data-lucide="linkedin"></i></a>
+        <a class="icon-btn glass" href="mailto:dasariprasanna225@gmail.com"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="toTop" class="to-top glass glow-border" aria-label="Scroll to top" hidden>
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
